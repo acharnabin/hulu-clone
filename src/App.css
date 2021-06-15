@@ -1,85 +1,138 @@
-.app{
-    
-    width:auto;
-    padding: 10px 20px;
-    background-color: #011627;
+.app {
+  background-color: #06202a;
+  color: #e0e0e0;
+  min-height: 100%;
 }
-.app_content{
-   
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+.icons {
+  color: #e0e0e0;
 }
-.app_content_hero{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background:url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80") #444444;
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.app_content_project{
-    background-color: #FDFFFC;
-    padding: 10px 20px;
+.header>img{
+  height:80px;
+  width:200px;
+  text-align: center;
+  object-fit: contain;
+  padding: 10px 20px;
 }
-.app_content_project>h1{
-    color: #E71D36;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 20px;
+.HeaderItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: none;
 }
-
-.app_content_project,.about_text>h5{
-    font-family: 'Zen Dots', sans-serif; 
-    color:#011627;
-    font-size: 18px;
-    word-spacing: 2px;
-    padding: 10px 20px;
+.HeaderItem > p {
+  letter-spacing: 1.2px;
+  opacity: 0;
+  cursor: pointer;
 }
-.app_content_skill{
-    padding: 10px 20px;
-    background-image: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1981&q=80");
- 
-
-  /* Set a specific height */
-  min-height: 600px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.HeaderItem:hover > p {
+  opacity: 1;
+  color: white;
 }
 
-.app_content_about{
-   background: white;
+.header_item_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav_item{
+  display: flex;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding: 10px;
+  padding-left: 40px;
+}
+.nav_item::-webkit-scrollbar{
+  display: none;
+}
+.nav_item>a{
+  color:white;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  margin:0px 30px;
+  white-space: none;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: transform 50ms ease-out;
+}
+.nav_item>a:hover{
+  opacity: 1;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+.nav_item>a:active{
+  color:red;
+}
+.movie_list{
+  overflow: hidden;
+}
+.vedio_card{
+  color:white;
+  width: 500px;
+  height: 100%;
+  cursor: pointer;
+  padding: 20px;
+  transition: transform 100ms ease-out;
+}
+.vedio_card:hover{
+  transform: scale(1.05);
+  
+}
+.vedio_card>img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.vedio_card>h2{
+  padding-top:10px;
+  font-size: 20px;
+  
+}
+.vedio_card>p{
+  padding-top:5px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+.vedio_like{
+  visibility: hidden;
+}
+.vedio_card:hover>.vedio_like{
+  visibility: visible;
+}
+.movie_list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+
+@media screen and (max-width: 426px){
+  .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:0px;
-   
-}
-.about_info,.app_content_about{
-    padding: 10px 20px;
-}
-.about_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     
+  }
+  .header>img{
+    height:80px;
+  }
+
+  
 }
-.about_text>h1{
-    color: #E71D36;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 20px;
+@media screen and (min-width: 768px){
+  
 }
-.about_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about_img>img{
-    object-fit: contain;
-    height:300px;
-    
+@media screen and (min-width: 2560px){
+  
 }

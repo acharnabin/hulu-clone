@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css';
-
+import Store from './Redux/store/store'
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { CssBaseline } from '@material-ui/core';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <Provider store={Store}>
+  <BrowserRouter>
+  <CssBaseline/>
+        <App />
+  </BrowserRouter>
+ </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
